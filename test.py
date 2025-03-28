@@ -10,12 +10,13 @@ if __name__ == '__main__':
 
     # 進行測試
     metrics = model.val(
-        data = data_path
+        data = data_path,
         batch = 16,               # 測試 batch size
         imgsz = 640,              # 測試圖片大小
         save_json = True,         # 產生 JSON 格式結果（COCO 格式）
-        conf = 0.492               # 置信度閾值
+        conf = 0.25,               # 置信度閾值
+        project = 'ultralytics-main/yolov11訓練環境/runs/detect',
+        name = 'conf=0.25'
     )
 
     # 顯示測試結果
-    print(metrics)
