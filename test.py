@@ -1,7 +1,7 @@
 import warnings
 warnings.filterwarnings('ignore')
 from ultralytics import YOLO
-model_path = r"D:/碩士班/程式測驗/ultralytics-main/runs/train/exp10/weights/best.pt"
+model_path = r"D:/碩士班/程式測驗/ultralytics-main/runs/train/exp10/weights/best.pt" 
 data_path = r"D:/碩士班/程式測驗/ultralytics-main/ultralytics/cfg/datasets/african-wildlife.yaml"
 
 if __name__ == '__main__':
@@ -10,7 +10,7 @@ if __name__ == '__main__':
 
     # 進行測試
     metrics = model.val(
-        #data = data_path,  # 測試數據集
+        data = data_path
         batch = 16,               # 測試 batch size
         imgsz = 640,              # 測試圖片大小
         save_json = True,         # 產生 JSON 格式結果（COCO 格式）

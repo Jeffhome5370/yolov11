@@ -2,8 +2,9 @@ import warnings
 warnings.filterwarnings('ignore')
 from ultralytics import YOLO
 import torch
-model_path = r'D:/碩士班/程式測驗/ultralytics-main/ultralytics/cfg/models/11/yolo11.yaml'
+model_path = r'D:/碩士班/程式測驗/ultralytics-main/ultralytics/cfg/models/11/yolo11.yaml'   #僅載入模型
 data_path = r'D:/碩士班/程式測驗/ultralytics-main/ultralytics/cfg/datasets/african-wildlife.yaml'
+
 if __name__ == '__main__':
     model = YOLO(model_path)
     model.train(
